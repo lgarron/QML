@@ -207,7 +207,7 @@ con2ty  = (tcon2ty.con2tcon)
 mkTy :: Int -> Ty
 mkTy  0     = Q1
 mkTy  1     = Q2
-mkTy  (n+1) = (mkTy n) :<*> Q2
+mkTy  n     = (mkTy (n-1)) :<*> Q2
 
 -- Names into types
 populate  :: Con -> Snoc Name -> Error TCon

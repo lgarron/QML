@@ -90,7 +90,7 @@ xs ++< (ys:<y)  =  (xs ++< ys):<y
 (!!<)           :: Snoc a -> Int -> a
 SNil   !!<_     = error "Empty !!< _"
 (_ :<x)!!<0     = x
-(xs:<_)!!<(n+1) = xs!!<n
+(xs:<_)!!<n     = xs!!<(n-1)
 
 sconcat      :: Snoc (Snoc a) -> Snoc a
 sconcat xss  = sfoldr (++<) SNil xss
@@ -120,12 +120,12 @@ sreverse (xs:<x) = (SNil:<x) ++< (sreverse xs)
 stake :: Int -> Snoc a -> Snoc a
 stake  0      _        = SNil
 stake  _      SNil     = SNil
-stake  (n+1)  (xs:<x)  = (stake n xs) :< x
+stake  n      (xs:<x)  = (stake (n-1) xs) :< x
 
 sdrop :: Int -> Snoc a -> Snoc a
 sdrop  0      xs       = xs
 sdrop  _      SNil     = SNil
-sdrop  (n+1)  (xs:<_)  = sdrop n xs
+sdrop  n      (xs:<_)  = sdrop (n-1) xs
 
 maybeToSnoc           :: Maybe a -> Snoc a
 maybeToSnoc Nothing    = SNil

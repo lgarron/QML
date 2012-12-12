@@ -1,7 +1,7 @@
 module QOrth where
 
-import Monad
-import Complex
+import Control.Monad
+import Data.Complex
 import QSyn
 import QAux
 import QCirc
