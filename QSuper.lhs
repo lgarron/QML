@@ -39,7 +39,7 @@ requires the use of the Glasgow extensions.
 
 \section{Module and import statements}
 \begin{code}
-{-# OPTIONS_GHC -fglasgow-exts #-}
+{-# OPTIONS_GHC -XMultiParamTypeClasses -XTypeSynonymInstances #-}
 \end{code}
 
 \begin{code}

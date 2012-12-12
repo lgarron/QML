@@ -38,7 +38,7 @@ This file includes the Haskell code for typed quantum circuits
 The Glasgow extensions are required.
 
 \begin{code}
-{-# OPTIONS_GHC -fglasgow-exts #-}
+{-# OPTIONS_GHC -XTypeSynonymInstances -XFlexibleInstances #-}
 \end{code}
 
 \begin{code}

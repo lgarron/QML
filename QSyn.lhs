@@ -37,10 +37,6 @@ This file includes the Haskell code which encapsulates the syntax
 of QML terms, introduced in chapter 6, QML: A functional quantum programming
 language.
 
-\begin{code}
-{-# OPTIONS_GHC -fglasgow-exts #-}
-\end{code}
-
 \section{Module and import statements}
 \begin{code}
 module QSyn where

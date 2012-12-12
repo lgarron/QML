@@ -42,7 +42,7 @@ This module requres the Glasgow extensions, |-fglasgow-exts|.
 \section{Module and import statements}
 %if False
 \begin{code}
-{-# OPTIONS_GHC -fglasgow-exts #-}
+{-# OPTIONS_GHC -XMultiParamTypeClasses -XFunctionalDependencies #-}
 \end{code}
 %endif
 \begin{code}
